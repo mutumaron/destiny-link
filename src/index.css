@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Farm-fresh design system with warm, natural colors */
+
+@layer base {
+  :root {
+    --background: 45 100% 98%;
+    --foreground: 30 40% 15%;
+
+    --card: 45 100% 96%;
+    --card-foreground: 30 40% 15%;
+
+    --popover: 45 100% 98%;
+    --popover-foreground: 30 40% 15%;
+
+    --primary: 35 65% 45%;
+    --primary-foreground: 45 100% 98%;
+
+    --secondary: 45 25% 88%;
+    --secondary-foreground: 30 40% 25%;
+
+    --muted: 45 25% 92%;
+    --muted-foreground: 30 20% 45%;
+
+    --accent: 50 75% 65%;
+    --accent-foreground: 30 40% 15%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 45 100% 98%;
+
+    --border: 45 30% 85%;
+    --input: 45 30% 85%;
+    --ring: 35 65% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+  }
+
+  /* 
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --farm-brown: 0 0% 100%;
+    --farm-orange: 0 0% 100%;
+  }
+} */
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-image: radial-gradient(
+        circle at 20% 80%,
+        rgba(255, 215, 0, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(139, 69, 19, 0.05) 0%,
+        transparent 50%
+      );
+  }
+}
+
+@layer components {
+  .farm-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(45, 100%, 98%) 0%,
+      hsl(50, 25%, 95%) 50%,
+      hsl(45, 15%, 92%) 100%
+    );
+  }
+  .farm-gradient-dark {
+    background: linear-gradient(
+      135deg,
+      hsl(0, 0%, 8%) 0%,
+      hsl(0, 0%, 12%) 50%,
+      hsl(0, 0%, 10%) 100%
+    );
+  }
+
+  .chicken-shadow {
+    box-shadow: 0 4px 6px -1px rgba(139, 69, 19, 0.1),
+      0 2px 4px -1px rgba(139, 69, 19, 0.06);
+  }
+}
